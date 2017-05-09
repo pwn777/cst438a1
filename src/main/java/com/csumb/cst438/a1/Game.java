@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @version 1.0
  */
 
-//Modified by Sam Roy
+//Modified by Sam Roy v2
 
 public class Game {
  
