@@ -13,6 +13,9 @@ import java.util.Scanner;
  * @author David
  * @version 1.0
  */
+
+//Modified by Sam Roy
+
 public class Game {
  
     private Random generator;  

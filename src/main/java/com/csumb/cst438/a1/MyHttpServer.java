@@ -5,6 +5,8 @@ import com.sun.net.httpserver.*;
 import java.io.*;
 import java.lang.Character;
 
+//Modified by Sam Roy
+
 public class MyHttpServer {
 
 	static final String RESOURCE_DIR = "src/main/resources/";
