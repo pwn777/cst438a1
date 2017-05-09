@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
 /**
  * Game contains logic to play hangman game.
  * Includes code to generate new words,
@@ -28,12 +29,33 @@ public class Game {
     private StringBuffer displayWord; // part of the word (if any) to show user
     private ArrayList<String> wordlist;  // list of words
     
-    public Game() {
-        word="computer";
-        createDisplayWord();
+    public Game(){
+        /*URL url = getClass().getResource("wordlist.txt");
+        File wordFile = new File(url.getPath());
+        
+        if(wordFile.exists()) {
+            Scanner s = new Scanner(wordFile);
+            ArrayList<String> wordList = new ArrayList<String>();
+            
+            while(s.hasNext()) {
+            wordList.add(s.next());
+            }
+        }
+        
+        
+        s.close();
+        
+        Random randomGen = new Random();
+        int randomIndex = randomGen.nextInt(wordList.size());*/
+        
+        
+        //simply add randomWord()
         state=1;
         wordlist=null;
         generator = new Random();
+        word=randomWord();
+        createDisplayWord();
+
     }
     
     public int getState(){
@@ -50,7 +72,8 @@ public class Game {
     
     public void startNewGame() {
         state = 1;
-        word = "computer";
+        //add randomWord()
+        word = randomWord();
         createDisplayWord();
         
     }
