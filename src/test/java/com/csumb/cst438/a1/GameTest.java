@@ -97,12 +97,39 @@ public class GameTest {
         assertEquals(1,result);
  
     }
+    
+    /**
+     * Test of the randomWord function
+     * Calls random word, grabs a character and tests a guess
+     * @return 
+     */
 
+    @org.junit.Test
+    private String testRandomWord() {
+        System.out.println("randomWord");
+        Game instance = new Game();
+        
+        instance.startNewGame();
+        String word = instance.getDisplayWord();
+        
+        int wordNum = word.length();
+        char randChar = word.charAt(wordNum - 1);
+        
+        int expResult = 0;
+        int result = instance.playGame(randChar);
+        
+        assertEquals(expResult, result);
+        
+        
+    }
+    
     /**
      * Test of playGame method, of class Game.
      *   correct guess should return 0 , or 1 when game is won
      *   incorrect guess should return 2, or 3 when game is lost
      */
+    
+   
     @org.junit.Test
     public void testPlayGame() {
         System.out.println("playGame");
